@@ -252,7 +252,7 @@ void Record::deleteRecord(std::vector<Student>& vec){
         if(ch=='y'||ch=='Y'){
             vec.erase(vec.begin()+i);
             writeOnfile(vec);
-            logHistory("DELETE RECORD ","Id::"+std::to_string(s1.id)+"Name:"+s1.name);
+            logHistory("DELETE RECORD ","Id::"+std::to_string(s1.id)+"  Name:"+s1.name);
             
             std::cout<<line;
             std::cout<<"\t\tStudent \""<<s1.name<<"\" Record DELETED Successully \n";
