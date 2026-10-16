@@ -7,6 +7,9 @@
 #include<ctime>
 #include<cstdio>
 #define line "-------------------------------------------------------------------------------\n";
+// sir total 3 classes use hua hai
+// all red dot numbers functions
+
 class Sorting;
 class Student{
     public:
@@ -98,6 +101,7 @@ void showHistory(){
         std::cout<<line;
         return;
     }
+    // lamda function or inline function
     auto rstr=[&](std::string& s){
         std::uint64_t len=0;
         if(!fin.read(reinterpret_cast<char*>(&len),sizeof(len))) return false;
@@ -592,6 +596,8 @@ std::vector<Student> Sorting::ByDob(std::vector<Student> vec,std::string order){
     auto changeFormatOld=[](std::string s){
             return s.substr(8,2)+s.substr(4,4)+s.substr(0,4);
     };
+    // Both are lamda function
+    
     for(Student &s : vec ){
         s.dob=changeFormat(s.dob);
     }
